@@ -39,7 +39,6 @@ type SpiderParserResponse struct {
 	Newspaper        string `json:"newspaper"`
 
 	ArticleText string `json:"article_text"`
-	// ArticleAttributes map[string]string `json:"article_attributes"`
 }
 
 // ML

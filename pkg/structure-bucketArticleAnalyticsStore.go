@@ -42,7 +42,7 @@ type bucketAnalytics_COMPREHEND_sentiment_scoredetails struct {
 
 // SUPPORT METHODS
 
-// convert comprehend seniment analysis output to internal format
+// convert comprehend sentiment analysis output to internal format
 func ConvBucketAnalytics_COMPREHEND_sentiment(sentence string, detectedSentimentOut *comprehend.DetectSentimentOutput) BucketAnalytics_COMPREHEND_sentiment {
 	return BucketAnalytics_COMPREHEND_sentiment{
 		Sentence:  sentence,
