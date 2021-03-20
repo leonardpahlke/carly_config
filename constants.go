@@ -1,4 +1,4 @@
-package pkg
+package carly_pkg
 
 const ProjectName = "carly"
 const DeploymentEnv = "dev"

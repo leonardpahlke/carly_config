@@ -1,4 +1,4 @@
-package pkg
+package carly_pkg
 
 import (
 	"bytes"
@@ -6,22 +6,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
-
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
-
-func GetResourceName(name string) string {
-	return fmt.Sprintf("%s-%s-%s", ProjectName, DeploymentEnv, name)
-}
-
-func GetTags(resourceName string) pulumi.StringMap {
-	return pulumi.StringMap{
-		"STAGE":      pulumi.String(DeploymentEnv),
-		"RESOURCE":   pulumi.String(resourceName),
-		"CREATED_BY": pulumi.String("Pulumi"),
-		"PROJECT":    pulumi.String(ProjectName),
-	}
-}
 
 func ListContains(element string, list []string) bool {
 	for _, elem := range list {
@@ -48,7 +33,6 @@ func CheckEnv(key string, expectedVal string) (string, bool) {
 	env := os.Getenv(key)
 	return env, env == expectedVal
 }
-
 
 func CreateKeyValuePairs(m map[string]string) string {
 	b := new(bytes.Buffer)
